@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rob-blasetti/static/css/main.0afc11c0.css",
+    "main.js": "/rob-blasetti/static/js/main.5743f3fc.js",
+    "static/js/787.05b3906e.chunk.js": "/rob-blasetti/static/js/787.05b3906e.chunk.js",
+    "index.html": "/rob-blasetti/index.html",
+    "main.0afc11c0.css.map": "/rob-blasetti/static/css/main.0afc11c0.css.map",
+    "main.5743f3fc.js.map": "/rob-blasetti/static/js/main.5743f3fc.js.map",
+    "787.05b3906e.chunk.js.map": "/rob-blasetti/static/js/787.05b3906e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0afc11c0.css",
+    "static/js/main.5743f3fc.js"
+  ]
+}
