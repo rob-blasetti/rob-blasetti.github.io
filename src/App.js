@@ -11,9 +11,9 @@ import './App.less';
 // Navbar Component
 const NavBar = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="navbar">
+    <Navbar expand="lg" className="navbar">
       <Container fluid>
-        <Navbar.Brand href="/">Liquid Gold - Crypto News</Navbar.Brand>
+        <Navbar.Brand href="/" className="navbar-brand">Liquid Gold - Crypto News</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <ul className="navbar-nav ml-auto">
@@ -75,27 +75,27 @@ const Courses = () => {
         <Col md={6} className="mb-4">
           <div className="course p-4">
             <h3 className="mb-3">Guided Tour Through Crypto Part 1</h3>
-            <a
+            <button
               href="https://qcc.rocks/guided-tour-through-crypto-order"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary"
+              className="btn"
             >
               Learn More <FontAwesomeIcon icon={faLongArrowAltRight} className="ml-2" />
-            </a>
+            </button>
           </div>
         </Col>
         <Col md={6}>
           <div className="course p-4">
             <h3 className="mb-3">Guided Tour Through Crypto Part 2</h3>
-            <a
+            <button
               href="https://qcc.rocks/guided-tour-through-crypto-order"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary"
+              className="btn"
             >
               Learn More <FontAwesomeIcon icon={faLongArrowAltRight} className="ml-2" />
-            </a>
+            </button>
           </div>
         </Col>
       </Row>
