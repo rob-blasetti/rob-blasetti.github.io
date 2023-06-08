@@ -15,11 +15,7 @@ body {
   justify-content: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: @primary-dark-grey;
-}
-
-p {
+h1, h2, h3, h4, h5, h6, p {
   color: @primary-dark-grey;
 }
 
@@ -30,34 +26,20 @@ p {
   color: @primary-gold;
 }
 
-.carousel-container {
-  width: 100%; // Full width on all screens
-  margin: auto;
-}
-
-// Adjust the carousel's width based on screen size
-@media (min-width: 576px) {
-  .carousel-container {
-    width: 75%; // 75% width on screens ≥576px wide
-  }
-}
-
-@media (min-width: 768px) {
-  .carousel-container {
-    width: 50%; // 50% width on screens ≥768px wide
-  }
-}
-
-@media (min-width: 992px) {
-  .carousel-container {
-    width: 33.33%; // 33.33% width on screens ≥992px wide
-  }
-}
-
 .carousel-video-container {
   position: relative;
-  height: 0;
-  padding-bottom: 56.25%; // Maintain a 16:9 aspect ratio for the videos
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.carousel-embed-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100% !important;
 }
 
 .carousel-iframe {
@@ -148,4 +130,68 @@ button:hover {
   font-size: 18px;
   color: @tertiary-white;
   margin-bottom: 0;
+}
+
+.carousel-container {
+  width: 100%; // Full width on mobile devices
+  max-width: 1140px; // Maximum width of 1140px on desktops
+  margin: 0 auto; // Center the container
+  position: relative;
+  padding: 1rem; // Reduce padding for very small screens
+  background: @tertiary-soft-gold;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: 376px) {
+    max-width: 360px; // Maximum width of 360px on small mobile devices
+    padding: 1.5rem; // Increase padding for slightly larger screens
+  }
+
+  @media screen and (min-width: 576px) {
+    max-width: 540px; // Maximum width of 540px on large mobile devices
+    padding: 1.5rem; // Increase padding for larger screens
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 720px; // Maximum width of 720px on tablets
+  }
+
+  @media screen and (min-width: 992px) {
+    max-width: 960px; // Maximum width of 960px on small laptops
+    width: 66.67%; // 2/3rd width on larger screens
+  }
+}
+
+.slick-dots {
+  bottom: -45px;
+
+  li {
+    margin: 0 3px;
+
+    button:before {
+      font-size: 12px;
+      color: @primary-dark-grey;
+      opacity: 0.5;
+    }
+  }
+
+  .slick-active button:before {
+    color: @primary-dark-grey;
+    opacity: 1;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  line-height: 1;
+  opacity: 0.75;
+  color: @primary-dark-grey;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before,
+.slick-prev:focus:before,
+.slick-next:focus:before {
+  opacity: 1;
 }

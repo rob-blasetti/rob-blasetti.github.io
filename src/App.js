@@ -1,12 +1,23 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
+import React, { useEffect } from 'react';
 import { Navbar, Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
+import Slider from "react-slick";
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './App.less';
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+};
 
 // Navbar Component
 const NavBar = () => {
@@ -44,27 +55,52 @@ const NavBar = () => {
   )
 }
 
+
+
 // Carousel Component
 const VideoCarousel = ({ videoIds = [] }) => {
+  useEffect(() => {
+    // Resize event listener
+    const handleResize = () => {
+      const aspectRatio = 9 / 16;
+      const carousels = document.querySelectorAll('.carousel-container .carousel-embed-container');
+      if (carousels) {
+        carousels.forEach(carousel => {
+          const width = carousel.clientWidth;
+          carousel.style.height = `${width * aspectRatio}px`;
+        });
+      }
+    };
+    // Attach listener
+    window.addEventListener('resize', handleResize);
+    handleResize();  // Call initially to set height based on initial width
+
+    // Cleanup listener on unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);  // Empty dependencies ensures this runs once on mount and cleanup on unmount
+
+
   return (
     <div className="carousel-container">
-      <Carousel showThumbs={false}>
+      <Slider {...settings}>
         {videoIds.map(videoId => (
           <div key={videoId} className="carousel-video-container">
-            <iframe
-              className="carousel-iframe"
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title={`Video ${videoId}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <div className="carousel-embed-container">
+              <iframe
+                className="carousel-iframe"
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title={`Video ${videoId}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         ))}
-      </Carousel>
+      </Slider>
     </div>
-  )
-}
+  );
+};
 
 // Courses Component
 const Courses = () => {
@@ -75,27 +111,27 @@ const Courses = () => {
         <Col md={6} className="mb-4">
           <div className="course p-4">
             <h3 className="mb-3">Guided Tour Through Crypto Part 1</h3>
-            <button
+            <a
               href="https://qcc.rocks/guided-tour-through-crypto-order"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
             >
               Learn More <FontAwesomeIcon icon={faLongArrowAltRight} className="ml-2" />
-            </button>
+            </a>
           </div>
         </Col>
         <Col md={6}>
           <div className="course p-4">
             <h3 className="mb-3">Guided Tour Through Crypto Part 2</h3>
-            <button
+            <a
               href="https://qcc.rocks/guided-tour-through-crypto-order"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
             >
               Learn More <FontAwesomeIcon icon={faLongArrowAltRight} className="ml-2" />
-            </button>
+            </a>
           </div>
         </Col>
       </Row>
