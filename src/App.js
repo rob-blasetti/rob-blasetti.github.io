@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Navbar, Container, Row, Col, Card } from 'react-bootstrap';
+import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
@@ -19,34 +20,33 @@ const settings = {
   autoplaySpeed: 2000,
 };
 
+
 // Navbar Component
 const NavBar = () => {
   return (
     <Navbar expand="lg" className="navbar">
       <Container fluid>
-        <Navbar.Brand href="/" className="navbar-brand">Liquid Gold - Crypto News</Navbar.Brand>
+        <Navbar.Brand className="navbar-brand">Liquid Gold - Crypto News</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="https://www.instagram.com/liquidgoldcrypto/">
-                <FontAwesomeIcon icon={faInstagram} /> Instagram
-              </a>
+              <Link to="home" smooth={true} duration={500} className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="https://twitter.com/LiquidGold2022">
-                <FontAwesomeIcon icon={faTwitter} /> Twitter
-              </a>
+              <Link to="news" smooth={true} duration={500} className="nav-link">News</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="https://www.tiktok.com/@liquidgold2022">
-                <FontAwesomeIcon icon={faTiktok} /> TikTok
-              </a>
+              <Link to="videos" smooth={true} duration={500} className="nav-link">Videos</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="https://www.youtube.com/@liquidgoldcrypto">
-                <FontAwesomeIcon icon={faYoutube} /> YouTube
-              </a>
+              <Link to="courses" smooth={true} duration={500} className="nav-link">Courses</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="about-us" smooth={true} duration={500} className="nav-link">About Us</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="contact-us" smooth={true} duration={500} className="nav-link">Contact Us</Link>
             </li>
           </ul>
         </Navbar.Collapse>
@@ -175,26 +175,32 @@ const App = () => {
   const videoIds = ['O-Yz0kD4lek', 'xreDj3ylvWE', 'RG6cdVnqpO8']; // replace with your video IDs
 
   return (
-    <div className="App">
+    <div className="App" id="home">
       <NavBar />
-      <header className="App-header">
+      <header className="App-header section">
         <Container>
           <h1 className="text-center mb-4">Liquid Gold - Crypto News</h1>
           <p className="text-center mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
         </Container>
-        <SocialLinks />
-        <VideoCarousel videoIds={videoIds} />
-        <Container className="text-center mt-4">
-          <a
-            className="youtube-link"
-            href="https://www.youtube.com/@liquidgoldcrypto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit our YouTube Channel
-          </a>
-        </Container>
-        <Courses />
+        <div id="social-links" className="section">
+          <SocialLinks />
+        </div>
+        <div id="videos" className="section">
+          <VideoCarousel videoIds={videoIds} />
+          <Container className="text-center mt-4">
+            <a
+              className="youtube-link"
+              href="https://www.youtube.com/@liquidgoldcrypto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit our YouTube Channel
+            </a>
+          </Container>
+        </div>
+        <div id="courses" className="section">
+          <Courses />
+        </div>
       </header>
     </div>
   );
