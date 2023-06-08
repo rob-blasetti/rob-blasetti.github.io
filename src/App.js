@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Navbar, Container, Row, Col } from 'react-bootstrap';
+import { Navbar, Container, Row, Col, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
@@ -55,7 +55,38 @@ const NavBar = () => {
   )
 }
 
-
+// SocialLinks Component
+const SocialLinks = () => {
+  return (
+    <Card className="social-links-card text-center mt-4">
+      <Card.Header className="social-links-header">
+        Follow us on social media!
+      </Card.Header>
+      <Card.Body>
+        <div className="social-link-tile">
+          <a href="https://www.instagram.com/liquidgoldcrypto/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} size="2x" className="social-icon" /> Instagram
+          </a>
+        </div>
+        <div className="social-link-tile">
+          <a href="https://twitter.com/LiquidGold2022" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTwitter} size="2x" className="social-icon" /> Twitter
+          </a>
+        </div>
+        <div className="social-link-tile">
+          <a href="https://www.tiktok.com/@liquidgold2022" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTiktok} size="2x" className="social-icon" /> TikTok
+          </a>
+        </div>
+        <div className="social-link-tile">
+          <a href="https://www.youtube.com/@liquidgoldcrypto" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faYoutube} size="2x" className="social-icon" /> YouTube
+          </a>
+        </div>
+      </Card.Body>
+    </Card>
+  )
+}
 
 // Carousel Component
 const VideoCarousel = ({ videoIds = [] }) => {
@@ -151,10 +182,11 @@ const App = () => {
           <h1 className="text-center mb-4">Liquid Gold - Crypto News</h1>
           <p className="text-center mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
         </Container>
+        <SocialLinks />
         <VideoCarousel videoIds={videoIds} />
         <Container className="text-center mt-4">
           <a
-            className="App-link"
+            className="youtube-link"
             href="https://www.youtube.com/@liquidgoldcrypto"
             target="_blank"
             rel="noopener noreferrer"
@@ -167,5 +199,6 @@ const App = () => {
     </div>
   );
 }
+
 
 export default App;
