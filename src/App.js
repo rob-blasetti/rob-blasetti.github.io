@@ -73,6 +73,22 @@ const NavBar = () => {
   );
 };
 
+const Hero = () => {
+  return (
+    <div className="hero-container">
+      <div className="hero-content">
+        <h1 className="hero-title">Welcome to Liquid Gold</h1>
+        <p className="hero-description">Your ultimate source for cryptocurrency news</p>
+        <Button variant="primary" as={Link} to="courses" smooth={true} duration={500} className="hero-button">
+          Check Out Our Courses
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+
+
 const SocialLinks = () => {
   return (
     <Card className="social-links-card text-center mt-4">
@@ -172,24 +188,43 @@ const Courses = () => (
   </Container>
 );
 
+let cache = {};
+
 const App = () => {
   const [videoIds, setVideoIds] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const getVideos = async () => {
-      const response = await axios.get(YOUTUBE_API_URL, {
-        params: {
-          part: 'snippet',
-          channelId: CHANNEL_ID,
-          maxResults: 5,
-          order: 'date',
-          type: 'video',
-          key: API_KEY
-        }
-      });
+      setIsLoading(true);
+      setError(null);
 
-      const ids = response.data.items.map(item => item.id.videoId);
-      setVideoIds(ids);
+      try {
+        let response;
+        if (cache[YOUTUBE_API_URL]) {
+          response = cache[YOUTUBE_API_URL];
+        } else {
+          response = await axios.get(YOUTUBE_API_URL, {
+            params: {
+              part: 'snippet',
+              channelId: CHANNEL_ID,
+              maxResults: 5,
+              order: 'date',
+              type: 'video',
+              key: API_KEY
+            }
+          });
+          cache[YOUTUBE_API_URL] = response;
+        }
+
+        const ids = response.data.items.map(item => item.id.videoId);
+        setVideoIds(ids);
+      } catch (err) {
+        setError('Something went wrong while loading videos. Please try again later.');
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     getVideos();
@@ -198,16 +233,14 @@ const App = () => {
   return (
     <div className="App" id="home">
       <NavBar />
+      <Hero />
       <header className="App-header section">
         <Container>
           <h1 className="text-center mb-4">Liquid Gold - Crypto News</h1>
           <p className="text-center mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
         </Container>
-        <div id="social-links" className="section">
-          <SocialLinks />
-        </div>
         <div id="videos" className="section">
-          <VideoCarousel videoIds={videoIds} />
+          {error ? <p>{error}</p> : isLoading ? <p>Loading...</p> : <VideoCarousel videoIds={videoIds} />}
           <Container className="text-center mt-4">
             <a
               className="youtube-link"
@@ -218,6 +251,9 @@ const App = () => {
               Visit our YouTube Channel
             </a>
           </Container>
+        </div>
+        <div id="social-links" className="section">
+          <SocialLinks />
         </div>
         <div id="courses" className="section">
           <Courses />

@@ -27,6 +27,65 @@ h1, h2, h3, h4, h5, h6, p {
   color: @primary-gold;
 }
 
+.hero-container {
+  background-color: @primary-dark-brown;
+  color: @tertiary-white;
+  padding: 50px 0;
+  text-align: center;
+  h1 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 24px;
+  }
+  .btn {
+    margin-top: 20px;
+    background-color: @primary-gold;
+    border: none;
+    padding: 10px 20px;
+    color: @tertiary-white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken(@primary-gold, 10%);
+    }
+  }
+}
+
+.hero-container {
+  background-image: url('~../public/images/LG-hero-image.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-content {
+  background-color: @tertiary-soft-gold;
+  opacity:0.85;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.hero-title {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-description {
+  margin: 10px 0;
+}
+
+.hero-button {
+  margin-top: 20px;
+}
+
 .carousel-video-container {
   position: relative;
   width: 100%;
@@ -129,6 +188,11 @@ button:hover {
       color: @tertiary-white;
     }
   }
+}
+
+
+.navbar-toggler {
+  display: none; //hide the toggler until the dropdown menu is working
 }
 
 .navbar {
