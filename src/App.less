@@ -116,12 +116,35 @@ button:hover {
 }
 
 .navbar {
+  background-color: @primary-dark-grey;
+  .navbar-brand {
+    color: @primary-gold;
+    &:hover {
+      color: @tertiary-soft-gold;
+    }
+  }
+  .nav-link {
+    color: @secondary-light-grey;
+    &:hover {
+      color: @tertiary-white;
+    }
+  }
+}
+
+.navbar {
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background-color: @primary-dark-grey;
+  border-bottom: 3px solid @primary-gold; /* Adding a gold border at the bottom */
+}
+
+.navbar-brand {
+  color: @primary-gold; /* Changing brand color to gold */
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .navbar-nav {
@@ -135,22 +158,24 @@ button:hover {
 }
 
 .nav-link {
-  color: @tertiary-white;
+  color: @tertiary-soft-gold; /* Changing link color to a softer gold */
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: color 0.2s, transform 0.2s;
   display: flex;
   align-items: center;
+  font-weight: bold; /* Making the text bold */
 }
 
 .nav-link svg {
   margin-right: 0.5rem;
+  transition: color 0.2s; /* Adding transition to icon color */
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color: fade(@tertiary-white, 10%);
+  color: @primary-gold; /* Changing text and icon color to gold on hover and focus */
   transform: scale(1.05);
 }
 
