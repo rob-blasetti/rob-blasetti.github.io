@@ -2,7 +2,8 @@
 
 body {
   background-color: @secondary-light-grey;
-  font-family: 'Arial', sans-serif;
+  // font-family: 'Arial', sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   color: @primary-dark-grey;
 }
 
@@ -50,14 +51,58 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100%;
 }
 
+// Courses Styles
 .courses-container {
-  background-color: @tertiary-soft-gold;
-}
-
-.course {
-  background-color: @secondary-blue;
+  background-color: @secondary-light-grey;
+  padding: 30px;
   border-radius: 15px;
-  color: @tertiary-white;
+
+  .course-card {
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .card-body {
+      background-color: @tertiary-soft-gold;
+      color: @primary-dark-brown;
+
+      h5 {
+        color: @primary-dark-grey;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        color: @primary-dark-grey;
+      }
+
+      .btn {
+        background-color: @primary-gold;
+        border: none;
+        padding: 10px 20px;
+        color: @tertiary-white;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: darken(@primary-gold, 10%);
+        }
+      }
+    }
+  }
 }
 
 button {

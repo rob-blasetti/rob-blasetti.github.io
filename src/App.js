@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Navbar, Container, Row, Col, Card } from 'react-bootstrap';
+import { Navbar, Button, Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
@@ -135,48 +135,36 @@ const VideoCarousel = ({ videoIds = [] }) => {
   );
 };
 
+// Individual Course Component
+const CourseCard = ({ course }) => (
+  <Card className="course-card">
+    <Card.Img variant="top" src={process.env.PUBLIC_URL + '/images/Guided-Tour-Through-Crypto-Online-Program.jpeg'} className="course-image" />
+    <Card.Body>
+      <Card.Title>{course.title}</Card.Title>
+      <Card.Text>{course.description}</Card.Text>
+      <Button variant="primary" href={course.link} target="_blank" rel="noopener noreferrer">
+        Learn More <FontAwesomeIcon icon={faLongArrowAltRight} className="ml-2" />
+      </Button>
+    </Card.Body>
+  </Card>
+);
+
 // Courses Component
-const Courses = () => {
-  return (
-    <Container className="courses-container mt-5">
-      <h2 className="text-center mb-5">Our Courses</h2>
-      <Row>
-        <Col md={6} className="mb-4">
-          <div className="course p-4">
-            <h3 className="mb-3">{COURSES[0].title}</h3>
-            <a
-              href={COURSES[0].link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-            >
-              Learn More <FontAwesomeIcon icon={faLongArrowAltRight} className="ml-2" />
-            </a>
-          </div>
+const Courses = () => (
+  <Container className="courses-container mt-5">
+    <h2 className="text-center mb-5">Our Courses</h2>
+    <Row>
+      {COURSES.map((course, index) => (
+        <Col md={6} className="mb-4" key={index}>
+          <CourseCard course={course} />
         </Col>
-        <Col md={6}>
-          <div className="course p-4">
-            <h3 className="mb-3">{COURSES[1].title}</h3>
-            <a
-              href={COURSES[1].link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-            >
-              Learn More <FontAwesomeIcon icon={faLongArrowAltRight} className="ml-2" />
-            </a>
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  )
-}
+      ))}
+    </Row>
+  </Container>
+);
 
 const App = () => {
-  // Fetch the videos from the YouTube API
   const [videoIds, setVideoIds] = useState([]);
-
-  // const videoIds = ['O-Yz0kD4lek', 'xreDj3ylvWE', 'RG6cdVnqpO8']; // replace with your video IDs
 
     useEffect(() => {
       const getVideos = async () => {
@@ -229,6 +217,5 @@ const App = () => {
     </div>
   );
 }
-
 
 export default App;
