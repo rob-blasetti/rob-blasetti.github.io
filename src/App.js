@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Navbar, Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
+import { YOUTUBE_API_URL, CHANNEL_ID, API_KEY, SOCIAL_LINKS, COURSES } from './constants';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,7 +15,7 @@ import './App.less';
 const settings = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 250,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
@@ -64,22 +66,22 @@ const SocialLinks = () => {
       </Card.Header>
       <Card.Body>
         <div className="social-link-tile">
-          <a href="https://www.instagram.com/liquidgoldcrypto/" target="_blank" rel="noopener noreferrer">
+          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="2x" className="social-icon" /> Instagram
           </a>
         </div>
         <div className="social-link-tile">
-          <a href="https://twitter.com/LiquidGold2022" target="_blank" rel="noopener noreferrer">
+          <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} size="2x" className="social-icon" /> Twitter
           </a>
         </div>
         <div className="social-link-tile">
-          <a href="https://www.tiktok.com/@liquidgold2022" target="_blank" rel="noopener noreferrer">
+          <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTiktok} size="2x" className="social-icon" /> TikTok
           </a>
         </div>
         <div className="social-link-tile">
-          <a href="https://www.youtube.com/@liquidgoldcrypto" target="_blank" rel="noopener noreferrer">
+          <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} size="2x" className="social-icon" /> YouTube
           </a>
         </div>
@@ -141,9 +143,9 @@ const Courses = () => {
       <Row>
         <Col md={6} className="mb-4">
           <div className="course p-4">
-            <h3 className="mb-3">Guided Tour Through Crypto Part 1</h3>
+            <h3 className="mb-3">{COURSES[0].title}</h3>
             <a
-              href="https://qcc.rocks/guided-tour-through-crypto-order"
+              href={COURSES[0].link}
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
@@ -154,9 +156,9 @@ const Courses = () => {
         </Col>
         <Col md={6}>
           <div className="course p-4">
-            <h3 className="mb-3">Guided Tour Through Crypto Part 2</h3>
+            <h3 className="mb-3">{COURSES[1].title}</h3>
             <a
-              href="https://qcc.rocks/guided-tour-through-crypto-order"
+              href={COURSES[1].link}
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
@@ -172,7 +174,29 @@ const Courses = () => {
 
 const App = () => {
   // Fetch the videos from the YouTube API
-  const videoIds = ['O-Yz0kD4lek', 'xreDj3ylvWE', 'RG6cdVnqpO8']; // replace with your video IDs
+  const [videoIds, setVideoIds] = useState([]);
+
+  // const videoIds = ['O-Yz0kD4lek', 'xreDj3ylvWE', 'RG6cdVnqpO8']; // replace with your video IDs
+
+    useEffect(() => {
+      const getVideos = async () => {
+        const response = await axios.get(YOUTUBE_API_URL, {
+          params: {
+            part: 'snippet',
+            channelId: CHANNEL_ID,
+            maxResults: 5,
+            order: 'date',
+            type: 'video',
+            key: API_KEY
+          }
+        });
+
+        const ids = response.data.items.map(item => item.id.videoId);
+        setVideoIds(ids);
+      };
+
+      getVideos();
+    }, []);
 
   return (
     <div className="App" id="home">
@@ -190,7 +214,7 @@ const App = () => {
           <Container className="text-center mt-4">
             <a
               className="youtube-link"
-              href="https://www.youtube.com/@liquidgoldcrypto"
+              href={SOCIAL_LINKS.youtube}
               target="_blank"
               rel="noopener noreferrer"
             >
