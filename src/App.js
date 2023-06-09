@@ -220,14 +220,12 @@ const ContactUs = () => (
 let cache = {};
 
 const App = () => {
-  const [videoIds, setVideoIds] = useState([]);
+  const [videoIds, setVideoIds] = useState(['LFrNh8WoPXE', 'jRpbm2QBNvw', 'Ycinl1b89eQ']);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const getVideos = async () => {
       setIsLoading(true);
-      setError(null);
 
       try {
         let response;
@@ -248,9 +246,11 @@ const App = () => {
         }
 
         const ids = response.data.items.map(item => item.id.videoId);
-        setVideoIds(ids);
+        if (ids.length > 0) {
+          setVideoIds(ids);
+        }
       } catch (err) {
-        setError('Something went wrong while loading videos. Please try again later.');
+        // do't show an error, just display default videos
       } finally {
         setIsLoading(false);
       }
@@ -269,7 +269,7 @@ const App = () => {
           <p className="text-center mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
         </Container>
         <div id="videos" className="section">
-          {error ? <p>{error}</p> : isLoading ? <p>Loading...</p> : <VideoCarousel videoIds={videoIds} />}
+          {isLoading ? <p>Loading...</p> : <VideoCarousel videoIds={videoIds} />}
           <Container className="text-center mt-4">
             <a
               className="youtube-link"
