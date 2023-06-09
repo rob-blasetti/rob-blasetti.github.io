@@ -188,6 +188,35 @@ const Courses = () => (
   </Container>
 );
 
+const AboutUs = () => (
+  <div id="about-us" className="section">
+    <Container>
+      <h2 className="text-center mb-4">About Us</h2>
+      <p className="text-center mb-4">
+        At Liquid Gold, we aim to be your ultimate source for cryptocurrency news.
+        Our dedicated team is committed to providing you with the most relevant and up-to-date information in the crypto world.
+        We believe that with the right information and tools, anyone can be successful in the cryptocurrency market.
+      </p>
+    </Container>
+  </div>
+);
+
+const ContactUs = () => (
+  <div id="contact-us" className="section">
+    <Container>
+      <h2 className="text-center mb-4">Contact Us</h2>
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <p className="text-center mb-4">
+            We would love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.
+          </p>
+          <p className="text-center">Email: <a href="mailto:info@liquidgold.com">info@liquidgoldcrypto.com.au</a></p>
+        </Col>
+      </Row>
+    </Container>
+  </div>
+);
+
 let cache = {};
 
 const App = () => {
@@ -257,6 +286,12 @@ const App = () => {
         </div>
         <div id="courses" className="section">
           <Courses />
+        </div>
+        <div id="about-us" className="section">
+          <AboutUs />
+        </div>
+        <div id="contact-us" className="section">
+          <ContactUs />
         </div>
       </header>
     </div>
