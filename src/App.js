@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Navbar, Nav, Button, Container, Row, Col, Card } from 'react-bootstrap';
+import { Navbar, Nav, Button, Container, Row, Col, Card, Form } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
@@ -9,7 +9,7 @@ import Slider from "react-slick";
 
 import { YOUTUBE_API_URL, CHANNEL_ID, API_KEY, SOCIAL_LINKS, COURSES } from './constants';
 import MobileDropdownMenu from './MobileDropdownMenu';
-
+import './colours.less'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.less';
@@ -49,9 +49,6 @@ const NavBar = () => {
           <Nav className="ml-auto">
             <Nav.Link as={Link} to="home" smooth={true} duration={500} className="nav-link">
               Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="news" smooth={true} duration={500} className="nav-link">
-              News
             </Nav.Link>
             <Nav.Link as={Link} to="videos" smooth={true} duration={500} className="nav-link">
               Videos
@@ -180,7 +177,7 @@ const Courses = () => (
     <h2 className="text-center mb-5">Our Courses</h2>
     <Row>
       {COURSES.map((course, index) => (
-        <Col md={6} className="mb-4" key={index}>
+        <Col xs={12} lg={6} className="mb-4" key={index}>
           <CourseCard course={course} />
         </Col>
       ))}
@@ -189,13 +186,14 @@ const Courses = () => (
 );
 
 const AboutUs = () => (
-  <div id="about-us" className="section">
+  <div id="about-us" className="section about-us-section">
     <Container>
       <h2 className="text-center mb-4">About Us</h2>
       <p className="text-center mb-4">
-        At Liquid Gold, we aim to be your ultimate source for cryptocurrency news.
+        At Liquid Gold - Crypto News, we aim to be your ultimate source for cryptocurrency news, education, and consultation.
         Our dedicated team is committed to providing you with the most relevant and up-to-date information in the crypto world.
-        We believe that with the right information and tools, anyone can be successful in the cryptocurrency market.
+        We offer explainer videos on crypto concepts, news videos, tutorials, comprehensive courses, and personalized consulting services to assist you with technical aspects of crypto and security.
+        Our goal is to empower individuals like you to navigate the crypto landscape confidently and make informed decisions.
       </p>
     </Container>
   </div>
@@ -220,13 +218,13 @@ const ContactUs = () => (
 let cache = {};
 
 const App = () => {
+  // default video IDs
   const [videoIds, setVideoIds] = useState(['LFrNh8WoPXE', 'jRpbm2QBNvw', 'Ycinl1b89eQ']);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getVideos = async () => {
       setIsLoading(true);
-
       try {
         let response;
         if (cache[YOUTUBE_API_URL]) {
@@ -250,7 +248,7 @@ const App = () => {
           setVideoIds(ids);
         }
       } catch (err) {
-        // do't show an error, just display default videos
+        // If an error occurs, just keep the default videos
       } finally {
         setIsLoading(false);
       }
@@ -260,42 +258,42 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App" id="home">
-      <NavBar />
-      <Hero />
-      <header className="App-header section">
-        <Container>
-          <h1 className="text-center mb-4">Liquid Gold - Crypto News</h1>
-          <p className="text-center mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
-        </Container>
-        <div id="videos" className="section">
-          {isLoading ? <p>Loading...</p> : <VideoCarousel videoIds={videoIds} />}
-          <Container className="text-center mt-4">
-            <a
-              className="youtube-link"
-              href={SOCIAL_LINKS.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit our YouTube Channel
-            </a>
+      <div className="App" id="home">
+        <NavBar />
+        <Hero />
+        <header className="App-header">
+          <Container className="text-center">
+            <h1 className="mb-4 liquid-gold-heading">Liquid Gold - Crypto News</h1>
+            <p className="mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
           </Container>
-        </div>
-        <div id="social-links" className="section">
-          <SocialLinks />
-        </div>
-        <div id="courses" className="section">
-          <Courses />
-        </div>
-        <div id="about-us" className="section">
-          <AboutUs />
-        </div>
-        <div id="contact-us" className="section">
-          <ContactUs />
-        </div>
-      </header>
-    </div>
-  );
-};
+          <div id="videos" className="section videos-section">
+            {isLoading ? <p>Loading...</p> : <VideoCarousel videoIds={videoIds} />}
+            <Container className="text-center mt-4">
+              <a
+                className="youtube-link"
+                href={SOCIAL_LINKS.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit our YouTube Channel
+              </a>
+            </Container>
+          </div>
+          <div id="social-links" className="section social-links-section">
+            <SocialLinks />
+          </div>
+          <div id="courses" className="section courses-section">
+            <Courses />
+          </div>
+          <div id="about-us" className="section courses-section">
+            <AboutUs />
+          </div>
+          <div id="contact-us" className="section courses-section">
+            <ContactUs />
+          </div>
+        </header>
+      </div>
+    );
+  };
 
 export default App;

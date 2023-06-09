@@ -2,7 +2,6 @@
 
 body {
   background-color: @secondary-light-grey;
-  // font-family: 'Arial', sans-serif;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: @primary-dark-grey;
 }
@@ -32,12 +31,15 @@ h1, h2, h3, h4, h5, h6, p {
   color: @tertiary-white;
   padding: 50px 0;
   text-align: center;
+
   h1 {
     font-size: 48px;
   }
+
   p {
     font-size: 24px;
   }
+
   .btn {
     margin-top: 20px;
     background-color: @primary-gold;
@@ -67,7 +69,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .hero-content {
   background-color: @tertiary-soft-gold;
-  opacity:0.85;
+  opacity: 0.85;
   padding: 20px;
   border-radius: 15px;
   text-align: center;
@@ -112,15 +114,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 // Courses Styles
 .courses-container {
-  background-color: @secondary-light-grey;
   padding: 30px;
-  border-radius: 15px;
 
   .course-card {
     margin-bottom: 30px;
     border: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    border-radius: 15px;
 
     &:hover {
       transform: translateY(-5px);
@@ -167,32 +168,35 @@ h1, h2, h3, h4, h5, h6, p {
 button {
   background-color: @secondary-blue;
   color: @primary-dark-grey;
-}
 
-button:hover {
-  background-color: @primary-gold;
-  color: @primary-dark-brown;
+  &:hover {
+    background-color: @primary-gold;
+    color: @primary-dark-brown;
+  }
 }
 
 .navbar {
   background-color: @primary-dark-grey;
+
   .navbar-brand {
     color: @primary-gold;
+
     &:hover {
       color: @tertiary-soft-gold;
     }
   }
+
   .nav-link {
     color: @secondary-light-grey;
+
     &:hover {
       color: @tertiary-white;
     }
   }
 }
 
-
 .navbar-toggler {
-  display: none; //hide the toggler until the dropdown menu is working
+  display: none; // Hide the toggler until the dropdown menu is working
 }
 
 .navbar {
@@ -296,6 +300,12 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .hero-content {
+    display: none;
+  }
+}
+
 .slick-dots {
   bottom: -45px;
 
@@ -382,5 +392,33 @@ button:hover {
 }
 
 .section {
-  margin-top: 150px;  // Or whatever size you prefer
+  margin-top: 250px;  // Or whatever size you prefer
+}
+
+.about-us-section {
+  background-color: @secondary-light-grey;
+}
+
+.contact-us-section {
+  background-color: @tertiary-yellow-gold;
+}
+
+.liquid-gold-heading {
+  color: @primary-gold;
+}
+
+.videos-section {
+  background-color: @tertiary-white;
+}
+
+.youtube-link {
+  font-weight: bold;
+}
+
+.social-links-section {
+  background-color: @secondary-light-grey;
+}
+
+.courses-section {
+  background-color: @primary-light-gold;
 }
