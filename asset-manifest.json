@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.93cc9d25.css",
-    "main.js": "/static/js/main.cb2c9fdc.js",
+    "main.js": "/static/js/main.edf40996.js",
     "static/js/787.47502b57.chunk.js": "/static/js/787.47502b57.chunk.js",
     "static/media/LG-hero-image.png": "/static/media/LG-hero-image.70c9037310e84e040796.png",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,11 +10,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.93cc9d25.css.map": "/static/css/main.93cc9d25.css.map",
-    "main.cb2c9fdc.js.map": "/static/js/main.cb2c9fdc.js.map",
+    "main.edf40996.js.map": "/static/js/main.edf40996.js.map",
     "787.47502b57.chunk.js.map": "/static/js/787.47502b57.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93cc9d25.css",
-    "static/js/main.cb2c9fdc.js"
+    "static/js/main.edf40996.js"
   ]
 }
