@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Navbar, Nav, Button, Container, Row, Col, Card, Form } from 'react-bootstrap';
+import { Navbar, Nav, Button, Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
@@ -34,16 +34,6 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className="navbar" expanded={expanded} onToggle={handleNavCollapse}>
       <Container fluid>
-        <Navbar.Brand className="navbar-brand">
-          <img
-            src={process.env.PUBLIC_URL + '/images/LG-logo.png'}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-            alt="Liquid Gold - Crypto News"
-          />
-          Liquid Gold - Crypto News
-        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleNavCollapse} />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="ml-auto">

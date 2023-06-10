@@ -2,7 +2,7 @@
 
 body {
   background-color: @secondary-light-grey;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: @primary-dark-grey;
 }
 
@@ -20,7 +20,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .navbar-brand {
-  font-family: 'Arial', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: @primary-gold;
@@ -68,19 +67,30 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .hero-content {
-  background-color: @tertiary-soft-gold;
-  opacity: 0.85;
+  background-color: @secondary-blue;
+  opacity: 0.95;
   padding: 20px;
-  border-radius: 15px;
   text-align: center;
 }
 
 .hero-title {
+  color: @secondary-gold;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
   margin: 0;
   padding: 0;
 }
 
 .hero-description {
+  color: @secondary-gold;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
   margin: 10px 0;
 }
 
@@ -205,7 +215,7 @@ button {
   width: 100%;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: @primary-dark-grey;
+  background-color: @secondary-blue;
   border-bottom: 3px solid @primary-gold; /* Adding a gold border at the bottom */
 }
 
