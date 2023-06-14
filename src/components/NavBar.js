@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
-import MobileDropdownMenu from '../MobileDropdownMenu'; // make sure the path is correct
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -11,8 +11,9 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar expand="lg" className="navbar" expanded={expanded} onToggle={handleNavCollapse}>
+    <Navbar expand="md" className="navbar" expanded={expanded} onToggle={handleNavCollapse}>
       <Container fluid>
+        <Navbar.Brand>Liquid Gold - Crypto News</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleNavCollapse} />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="ml-auto">
@@ -32,7 +33,6 @@ const NavBar = () => {
               Contact Us
             </Nav.Link>
           </Nav>
-          <MobileDropdownMenu />
         </Navbar.Collapse>
       </Container>
     </Navbar>

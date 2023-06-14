@@ -1,22 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
-import {
-  NavBar,
-  VideoCarousel,
-  SocialLinks,
-  Hero,
-  Courses,
-  AboutUs,
-  ContactUs
-} from './components';
-
 import axios from 'axios';
+import { NavBar, VideoCarousel, SocialLinks, Hero, Courses, AboutUs, ContactUs } from './components';
 import { Container } from 'react-bootstrap';
 
 import { YOUTUBE_API_URL, CHANNEL_ID, API_KEY, SOCIAL_LINKS } from './constants';
-import './colours.less'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import './colours.less';
 import './App.less';
 
 let cache = {};
