@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 
 const AboutUs = () => (
-  <div id="about-us" className="section about-us-section">
+  <div id="about-us" className="about-us-section">
     <Container>
       <h2 className="text-center mb-4">About Us</h2>
       <p className="text-center mb-4">

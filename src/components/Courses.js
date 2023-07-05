@@ -4,7 +4,7 @@ import CourseCard from './CourseCard';
 import { COURSES } from '../constants';
 
 const Courses = () => (
-  <Container className="courses-container mt-5">
+  <Container>
     <h2 className="text-center mb-5">Our Courses</h2>
     <Row>
       {COURSES.map((course, index) => (
