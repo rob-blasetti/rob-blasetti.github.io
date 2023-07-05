@@ -15,6 +15,10 @@ body {
   justify-content: center;
 }
 
+.App-header {
+  width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   color: @primary-dark-grey;
 }
@@ -54,7 +58,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .hero-container {
-  background-image: url('~../public/images/LG-hero-image.png');
+  background-image: url('~../public/images/LG-hero-image.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -188,6 +192,8 @@ button {
 .navbar {
   background-color: @primary-dark-grey;
   cursor: default;
+  padding-left: 50px;
+  padding-right: 50px;
 
   .navbar-brand {
     color: @primary-gold;
@@ -199,6 +205,7 @@ button {
 
   .nav-link {
     color: @secondary-light-grey;
+    padding-right: 50px;
 
     &:hover {
       color: @tertiary-white;
@@ -286,19 +293,19 @@ button {
   max-width: 1140px; // Maximum width of 1140px on desktops
   margin: 0 auto; // Center the container
   position: relative;
-  padding: 1rem; // Reduce padding for very small screens
+  padding: 2rem; // Reduce padding for very small screens
   background: @tertiary-soft-gold;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
   @media screen and (min-width: 376px) {
     max-width: 360px; // Maximum width of 360px on small mobile devices
-    padding: 1.5rem; // Increase padding for slightly larger screens
+    padding: 2.5rem; // Increase padding for slightly larger screens
   }
 
   @media screen and (min-width: 576px) {
     max-width: 540px; // Maximum width of 540px on large mobile devices
-    padding: 1.5rem; // Increase padding for larger screens
+    padding: 2.5rem; // Increase padding for larger screens
   }
 
   @media screen and (min-width: 768px) {
@@ -318,7 +325,7 @@ button {
 }
 
 .slick-dots {
-  bottom: -45px;
+  bottom: -30px;
 
   li {
     margin: 0 3px;
@@ -334,6 +341,10 @@ button {
     color: @primary-dark-grey;
     opacity: 1;
   }
+}
+
+.slick-prev {
+  left: -35px
 }
 
 .slick-prev:before,
@@ -403,7 +414,8 @@ button {
 }
 
 .section {
-  margin-top: 250px;  // Or whatever size you prefer
+  padding-top: 150px;  // Or whatever size you prefer
+  padding-bottom: 150px;  // Or whatever size you prefer
 }
 
 .about-us-section {

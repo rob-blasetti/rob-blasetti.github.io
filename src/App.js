@@ -56,8 +56,7 @@ const App = () => {
         <NavBar />
         <Hero />
         <header className="App-header">
-          <Container className="text-center">
-            <h1 className="mb-4 liquid-gold-heading">Liquid Gold - Crypto News</h1>
+          <Container className="section">
             <p className="mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
           </Container>
           <div id="videos" className="section videos-section">
@@ -79,10 +78,10 @@ const App = () => {
           <div id="courses" className="section courses-section">
             <Courses />
           </div>
-          <div id="about-us" className="section courses-section">
+          <div id="about-us" className="section about-us-section">
             <AboutUs />
           </div>
-          <div id="contact-us" className="section courses-section">
+          <div id="contact-us" className="section contact-us-section">
             <ContactUs />
           </div>
         </header>
