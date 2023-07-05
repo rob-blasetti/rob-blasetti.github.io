@@ -57,9 +57,12 @@ const App = () => {
         <Hero />
         <header className="App-header">
           <Container className="section">
+            <h1>The cutting edge of the crypto economy</h1>
             <p className="mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
           </Container>
           <div id="videos" className="section videos-section">
+          <h1>Liquid Gold Media</h1>
+          <p>News, Crypto Explainers, Opinions. Have a look at our curated playlists, designed to cater for all levels of experience.</p>
             {isLoading ? <p>Loading...</p> : <VideoCarousel videoIds={videoIds} />}
             <Container className="text-center mt-4">
               <a
@@ -72,9 +75,6 @@ const App = () => {
               </a>
             </Container>
           </div>
-          <div id="social-links" className="section social-links-section">
-            <SocialLinks />
-          </div>
           <div id="courses" className="section courses-section">
             <Courses />
           </div>
@@ -83,6 +83,9 @@ const App = () => {
           </div>
           <div id="contact-us" className="section contact-us-section">
             <ContactUs />
+          </div>
+          <div id="social-links" className="social-links-section">
+            <SocialLinks />
           </div>
         </header>
       </div>

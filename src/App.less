@@ -17,6 +17,10 @@ body {
 
 .App-header {
   width: 100%;
+  background-color: @primary-dark-grey;
+  h1, p {
+    color: white;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -383,6 +387,9 @@ button {
   border: 1px solid @primary-dark-grey;
   border-radius: 5px;
   transition: background-color 0.3s, border-color 0.3s;
+  a {
+    text-decoration: none;
+  }
 }
 
 .social-link-tile:hover {
@@ -420,10 +427,16 @@ button {
 
 .about-us-section {
   background-color: @secondary-light-grey;
+  h2, p {
+    color: @primary-dark-grey;
+  }
 }
 
 .contact-us-section {
-  background-color: @tertiary-yellow-gold;
+  background-color: @secondary-dark-blue;
+  h2, p {
+    color: @tertiary-white;
+  }
 }
 
 .liquid-gold-heading {
@@ -431,7 +444,10 @@ button {
 }
 
 .videos-section {
-  background-color: @tertiary-white;
+  background-color: @secondary-light-grey;
+  h1, p {
+    color: @primary-light-grey;
+  }
 }
 
 .youtube-link {
@@ -439,9 +455,12 @@ button {
 }
 
 .social-links-section {
-  background-color: @secondary-light-grey;
+  background-color: @tertiary-white;
 }
 
 .courses-section {
-  background-color: @primary-light-gold;
+  background-color: @primary-dark-grey;
+  h2 {
+    color: white;
+  }
 }
