@@ -20,6 +20,7 @@ body {
   background-color: @primary-dark-grey;
   h1, p {
     color: white;
+    margin-bottom: 30px;
   }
 }
 
@@ -34,10 +35,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .hero-container {
-  background-color: @primary-dark-brown;
-  color: @tertiary-white;
-  padding: 50px 0;
-  text-align: center;
+  background-image: url('~../public/images/LG-hero-image.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 40vw;
 
   h1 {
     font-size: 48px;
@@ -59,19 +62,6 @@ h1, h2, h3, h4, h5, h6, p {
       background-color: darken(@primary-gold, 10%);
     }
   }
-}
-
-.hero-container {
-  background-image: url('~../public/images/LG-hero-image.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 40vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
 }
 
 .hero-content {
@@ -421,14 +411,15 @@ button {
 }
 
 .section {
-  padding-top: 150px;  // Or whatever size you prefer
-  padding-bottom: 150px;  // Or whatever size you prefer
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 
 .about-us-section {
   background-color: @secondary-light-grey;
   h2, p {
     color: @primary-dark-grey;
+    margin-bottom: 30px;
   }
 }
 
@@ -436,6 +427,7 @@ button {
   background-color: @secondary-dark-blue;
   h2, p {
     color: @tertiary-white;
+    margin-bottom: 30px;
   }
 }
 
@@ -446,7 +438,8 @@ button {
 .videos-section {
   background-color: @secondary-light-grey;
   h1, p {
-    color: @primary-light-grey;
+    color: @primary-dark-grey;
+    margin-bottom: 30px;
   }
 }
 
@@ -462,5 +455,6 @@ button {
   background-color: @primary-dark-grey;
   h2 {
     color: white;
+    margin-bottom: 30px;
   }
 }
