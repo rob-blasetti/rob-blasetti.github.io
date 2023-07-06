@@ -1,13 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import blogs from './BlogData';
 
 const BlogPage = () => {
-  const blogs = [
-    { id: 1, title: "Blog 1", content: "Content for blog 1", author: "Author 1", source: "Source 1" },
-    { id: 2, title: "Blog 2", content: "Content for blog 2", author: "Author 2", source: "Source 2" },
-    // Add more blogs here
-  ];
 
   return (
     <Container>
@@ -18,7 +14,7 @@ const BlogPage = () => {
             <Link to={`/blog/${blog.id}`} className="blog-page">
               <div className="blog-card">
                 <h2>{blog.title}</h2>
-                <p>{blog.content}</p>
+                <p>{blog.content.split(' ').filter((word, index) => index < 15).join(' ') + '...'}</p>
                 <p className="author">Author: {blog.author}</p>
                 <p className="source">Source: {blog.source}</p>
               </div>

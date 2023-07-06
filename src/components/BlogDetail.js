@@ -1,21 +1,13 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams, Link } from 'react-router-dom';
+import blogs from './BlogData';
 
 const BlogDetail = () => {
   const { id } = useParams();
-
-  const blogs = [
-    { id: 1, title: "Blog 1", content: "Content for blog 1", author: "Author 1", source: "Source 1" },
-    { id: 2, title: "Blog 2", content: "Content for blog 2", author: "Author 2", source: "Source 2" },
-    // Add more blogs here
-  ];
-
   const blog = blogs.find((blog) => blog.id === parseInt(id));
 
-  if (!blog) {
-    return <p>Blog not found</p>;
-  }
+  if (!blog) return <p>Blog not found</p>;
 
   return (
     <Container className="blog-detail">
