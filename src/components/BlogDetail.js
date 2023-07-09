@@ -15,17 +15,19 @@ const BlogDetail = () => {
   return (
     <Container className="blog-detail">
       <h2 className="detail-title">{blog.title}</h2>
-      <p className="detail-author">Author: {blog.author}</p>
-      <p className="detail-source">Source: {blog.source}</p>
-      <p className="detail-last-updated">Last Updated: {blog.lastUpdated}</p>
+      <div className="detail-info">
+        <span><b>Author:</b> {blog.author}</span>
+        <span> | </span>
+        <span><b>Source:</b> {blog.source}</span>
+        <span> | </span>
+        <span><b>Last Updated:</b> {blog.lastUpdated}</span>
+      </div>
       {
         paragraphs.map((paragraph, index) => (
           <p key={index} className="detail-content">{paragraph}</p>
         ))
       }
-      <Link to="/blog" className="back-button">
-        <div>Back to Blog Page</div>
-      </Link>
+      <Link to="/blog" className="back-button">Back to Blog Page</Link>
     </Container>
   );
 };
