@@ -6,7 +6,7 @@ import blogs from './BlogData';
 const BlogPage = () => {
   return (
     <Container className="blog-page">
-      <h1 className="title">Collection Of Blogs</h1>
+      <h1 className="title">Blogs</h1>
       <Row>
         {blogs.map((blog) => (
           <Col md={6} lg={4} key={blog.id}>
