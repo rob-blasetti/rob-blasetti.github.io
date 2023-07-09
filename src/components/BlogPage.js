@@ -4,18 +4,17 @@ import { Link } from 'react-router-dom';
 import blogs from './BlogData';
 
 const BlogPage = () => {
-
   return (
-    <Container>
-      <h1 className="blog-page title">Blog Page</h1>
+    <Container className="blog-page">
+      <h1 className="title">Blog Page</h1>
       <Row>
         {blogs.map((blog) => (
           <Col md={6} lg={4} key={blog.id}>
-            <Link to={`/blog/${blog.id}`} className="blog-page">
+            <Link to={`/blog/${blog.id}`}>
               <div className="blog-card">
-                <h2>{blog.title}</h2>
-                <p>{blog.content.split(' ').filter((word, index) => index < 15).join(' ') + '...'}</p>
-                <p className="author">Author: {blog.author}</p>
+                <h2 className="card-title">{blog.title}</h2>
+                <p className="card-content">{blog.content.split(' ').filter((word, index) => index < 15).join(' ') + '...'}</p>
+                <p className="card-author">Author: {blog.author}</p>
                 <p className="source">Source: {blog.source}</p>
               </div>
             </Link>
