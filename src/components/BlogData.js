@@ -32,7 +32,8 @@ const BlogData = [
       
       `, 
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "5 January, 2016"
     },
     { 
       id: 2, 
@@ -80,7 +81,8 @@ The chart to the left shows bitcoins volatility has significantly decreased in t
 Another reason for the decreasing in volatility is the development of the tools that are used to trade financial products in Forex markets. Modern exchanges offer customers the ability to use mechanisms like shorting and futures trade to create price floors and ceilings, keeping the volatility to a minimum. Ideally, this will eventually give us the general level of stability we expect from currency markets.
       `, 
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "12 January, 2016" 
     },
     { 
       id: 3, 
@@ -122,7 +124,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       Consultant @ ThoughtWorks
       `, 
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "22 March, 2016" 
     },
     {
       id: 4,
@@ -152,7 +155,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       Consultant @ ThoughtWorks`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "27 July, 2016" 
     },
     {
       id: 5,
@@ -191,7 +195,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       Consultant @ ThoughtWorks`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "7 September, 2016" 
     },
     {
       id: 6,
@@ -231,7 +236,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       Opendime functions as more of a barer bond than a hardware wallet. Also known as a Bitcoin Credit Stick or Bitcoin Stick, they are the latest addition to the bitcoin hardware range. Opendime is intended to be loaded up with bitcoin and passed from person to person similar to using physical cash. This wouldn’t be ideal for long term storage, but if you are interested in trying out cutting edge hardware you will want to try an Opendime. You can pick up 3 for about $100 (USD) here.`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "3 January, 2017" 
     },
     {
       id: 7,
@@ -280,7 +286,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       `,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "5 January, 2017" 
     },
     {
       id: 8,
@@ -322,7 +329,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       All of these problems have potential solutions that can be implemented as a fix. In my view blockchains will eventually have a layers of centralisation like the lightning network, however this is not a bad thing so long as there is a sufficient amount of encryption to protect the privacy of the people who want to use the centralised layers of the network.`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "13 January, 2017" 
     },
     {
       id: 9,
@@ -368,7 +376,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       As it stands both Bitcoin Cores SegWit and Bitcoin Unlimited have fluctuated at around %25–30 of votes from the miners on the network. Will the block size issue be resolved with peaceful agreement between Core and the Miners? Or will people get fed up and start looking towards Bitcoin Unlimited, or give up hope on scaling altogether. Your guess is as good as mine.`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "21 February, 2017" 
     },
     {
       id: 10,
@@ -405,7 +414,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       The potential hard fork might be stressful for people who are new to the bitcoin space, however with growth comes a bit of pain. Bare in mind the only reason we have this scaling issue is because the demand to use the bitcoin network is at an all time high, the resolution of the debate is required for the network to advance to a higher capacity of users.`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "23 March, 2017" 
     },
     {
       id: 11,
@@ -430,7 +440,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       Rob`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "1 February, 2018" 
     },
     {
       id: 12,
@@ -465,7 +476,8 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       Smart contracts still have a ways to go before making any real impact on the world. The DAO hack debacle likely shook the faith in their short term potential. In the longer term though we need to recognise that there was a cost to building a trust-less foundation to society on blockchain technology. Eventually the layers of trust must be reintroduced. Oracles in smart contracts are a blaring reminder of that.`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "11 April, 2018" 
     },
     {
       id: 13,
@@ -486,9 +498,9 @@ Another reason for the decreasing in volatility is the development of the tools 
       
       During this early phase of the crypto-economic movement the required reputation systems and oracle frameworks have yet to be developed. From the arguments presented in this article it seems reasonable that smart contracts might first be validated by multiple oracles rather than a single reputable source.`,
       author: "Robert Blasetti", 
-      source: "Medium (Discontinued)" 
+      source: "Medium (Discontinued)",
+      lastUpdated: "9 September, 2019" 
     }
-
   ];
   
   export default BlogData;
