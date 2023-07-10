@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { NavBar, VideoCarousel, SocialLinks, Hero, Courses, BlogPage, BlogDetail, AboutUs, ContactUs } from './components';
+import { NavBar, VideoCarousel, SocialLinks, Hero, Courses, BlogPage, BlogDetail, NewsletterSignup, AboutUs, ContactUs } from './components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
@@ -83,6 +83,9 @@ const App = () => {
               </div>
               <div id="courses" className="section courses-section">
                 <Courses />
+              </div>
+              <div id="newsletter-signup" className="section newsletter-signup-section">
+                <NewsletterSignup />
               </div>
               <div id="about-us" className="section about-us-section">
                 <AboutUs />

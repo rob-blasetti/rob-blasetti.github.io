@@ -28,6 +28,7 @@ const NavBar = () => {
                 <ScrollLink activeClass="active" className="nav-link" to="about-us" spy={true} smooth={true} duration={500}>About</ScrollLink>
                 <ScrollLink activeClass="active" className="nav-link" to="videos" spy={true} smooth={true} duration={500}>Videos</ScrollLink>
                 <ScrollLink activeClass="active" className="nav-link" to="courses" spy={true} smooth={true} duration={500}>Courses</ScrollLink>
+                <ScrollLink activeClass="active" className="nav-link" to="newsletter-signup" spy={true} smooth={true} duration={500}>Newsletter</ScrollLink>
                 <RouterLink className="nav-link" to="/blog">Blog</RouterLink>
                 <ScrollLink activeClass="active" className="nav-link" to="contact-us" spy={true} smooth={true} duration={500}>Contact</ScrollLink>
               </>
@@ -37,6 +38,7 @@ const NavBar = () => {
                 <RouterLink className="nav-link" to="/#about-us">About</RouterLink>
                 <RouterLink className="nav-link" to="/#videos">Videos</RouterLink>
                 <RouterLink className="nav-link" to="/#courses">Courses</RouterLink>
+                <RouterLink className="nav-link" to="/#newsletter">Newsletter</RouterLink>
                 <RouterLink className="nav-link" to="/blog">Blog</RouterLink>
                 <RouterLink className="nav-link" to="/#contact-us">Contact</RouterLink>
               </>

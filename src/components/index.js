@@ -7,3 +7,4 @@ export { default as BlogPage } from './BlogPage';
 export { default as BlogDetail } from './BlogDetail';
 export { default as AboutUs } from './AboutUs';
 export { default as ContactUs } from './ContactUs';
+export { default as NewsletterSignup } from './NewsletterSignup';

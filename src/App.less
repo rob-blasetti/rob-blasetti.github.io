@@ -416,6 +416,55 @@ button {
   padding-bottom: 150px;
 }
 
+@media screen and (min-width: 900px) {
+  .newsletter-signup-section {
+    padding-right: 150px;
+    padding-left: 150px;
+  }  
+}
+
+.newsletter-signup-section {
+  background-color: @secondary-dark-blue;
+  h2, p, .form-label {
+    color: @tertiary-white;
+    margin-bottom: 30px;
+  }
+}
+
+.newsletter-signup-section {
+  .asterisk {
+    color: red;
+  }
+
+  .form-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .form-label {
+    flex: 1;
+  }
+
+  .form-control {
+    flex: 2;
+  }
+  
+  .newsletter-submit-buttom {
+    background-color: @primary-gold;
+    color: @primary-dark-grey;
+    padding: 8px 16px;
+    border: 2px solid @primary-dark-grey;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(@primary-gold, 10%);
+    }
+  }  
+}
+
+
+
 .about-us-section {
   background-color: @secondary-light-grey;
   h2, p {

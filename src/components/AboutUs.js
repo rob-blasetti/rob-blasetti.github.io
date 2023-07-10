@@ -23,7 +23,7 @@ const AboutUs = () => (
         your specific needs.
       </p>
       
-      <p>
+      <p>   
         Our mission is to empower individuals like you to confidently navigate the crypto landscape and make well-informed decisions. Whether you're a beginner
         or an experienced crypto enthusiast, Liquid Gold is here to support you on your path to success in the exciting world of digital assets.
       </p>
