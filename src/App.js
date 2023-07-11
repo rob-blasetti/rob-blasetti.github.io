@@ -84,7 +84,7 @@ const App = () => {
               <div id="courses" className="section courses-section">
                 <Courses />
               </div>
-              <div id="newsletter-signup" className="section newsletter-signup-section">
+              <div id="newsletter" className="section newsletter-signup-section">
                 <NewsletterSignup />
               </div>
               <div id="about-us" className="section about-us-section">

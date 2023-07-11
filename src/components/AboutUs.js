@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 const AboutUs = () => (
   <div id="about-us" className="about-us-section">
     <Container>
-      <h2 className="text-center mb-4">About Us</h2>
+      <h2 className="text-center mb-4">Our Journey</h2>
       <p className="text-center mb-4">
         The world is changing fast, and at Liquid Gold, we thrive on being at the forefront of the crypto revolution. We are your trusted source of
         cutting-edge information, keeping you well-informed about the latest developments in the world of decentralized finance. Our passionate team is
