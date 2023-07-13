@@ -19,7 +19,7 @@ body {
   width: 100%;
   background-color: @primary-dark-grey;
   h1, p {
-    color: white;
+    color: @tertiary-white;
     margin-bottom: 30px;
   }
 }
@@ -235,6 +235,12 @@ button {
   padding: 0;
   margin: 0;
   width: 100%;
+  .nav-link {
+    &.active, 
+    &.show { 
+      color: @tertiary-white; 
+    }
+  }
 }
 
 .nav-link {
@@ -358,7 +364,7 @@ button {
 
 .social-links-card {
   background-color: @secondary-light-grey;
-  color: @primary-dark-grey;
+  color: black;
 }
 
 .social-links-header {
@@ -380,6 +386,7 @@ button {
   cursor: pointer;
   a {
     text-decoration: none;
+    color: @primary-light-gold;
   }
 }
 
@@ -402,7 +409,7 @@ button {
 .youtube-link {
   display: inline-block;
   padding: 0.5em 2em;
-  color: @primary-dark-grey;
+  color: @primary-light-gold;
   background-color: @primary-gold;
   border: 2px solid @primary-dark-brown;
   text-decoration: none;
@@ -452,7 +459,7 @@ button {
   
   .newsletter-submit-buttom {
     background-color: @primary-gold;
-    color: @primary-dark-grey;
+    color: @primary-light-gold;
     padding: 8px 16px;
     border: 2px solid @primary-dark-grey;
     border-radius: 4px;
@@ -468,7 +475,7 @@ button {
 .about-us-section {
   background-color: @secondary-light-grey;
   h2, p {
-    color: @primary-dark-grey;
+    color: black;
     margin-bottom: 30px;
   }
 }
@@ -479,6 +486,9 @@ button {
     color: @tertiary-white;
     margin-bottom: 30px;
   }
+  a {
+    color: @primary-gold;
+  }
 }
 
 .liquid-gold-heading {
@@ -488,7 +498,7 @@ button {
 .videos-section {
   background-color: @secondary-light-grey;
   h1, p {
-    color: @primary-dark-grey;
+    color: black;
     margin-bottom: 30px;
   }
 }
@@ -518,7 +528,7 @@ button {
   min-width: 260px;
   min-height: 260px;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: @tertiary-white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-in-out;
   &:hover {
@@ -614,11 +624,12 @@ button {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #f5f5f5;
+  background-color: #c9bb9e;
   h1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 16px;
+    color: black;
   }
   a {
     text-decoration: none;
@@ -654,9 +665,11 @@ button {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 10px;
-  color: @tertiary-white;}
+  color: @tertiary-white;
+}
 
 .testimonial-author {
   font-size: 16px;
   font-weight: bold;
-  color: @tertiary-white;}
+  color: @tertiary-white;
+}
