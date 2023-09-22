@@ -5,7 +5,7 @@ import { COURSES } from '../constants';
 
 const Courses = () => (
   <Container>
-    <h2 className="text-center mb-5">Take the beginners course, a prelude to the Liquid Gold journey.</h2>
+    <h1 className="text-center mb-5">Take the beginners course, a prelude to the Liquid Gold journey.</h1>
     <Row>
       {COURSES.map((course, index) => (
         <Col xs={12} lg={6} className="mb-4" key={index}>

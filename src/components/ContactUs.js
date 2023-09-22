@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 const ContactUs = () => (
   <div id="contact-us">
     <Container>
-      <h2 className="text-center mb-4">Contact Us</h2>
+      <h1 className="text-center mb-4">Contact Us</h1>
       <Row className="justify-content-center">
         <Col md={6}>
           <p className="text-center mb-4">

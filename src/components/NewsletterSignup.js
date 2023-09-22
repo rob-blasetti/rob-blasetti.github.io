@@ -5,7 +5,7 @@ const NewsletterSignup = () => {
     return (
         <Container id="newsletter-signup" className="newsletter-signup-section">
             <Form action="https://liquidgoldcrypto.us11.list-manage.com/subscribe/post?u=ef21ffacffc296d3510cc1e0e&amp;id=21eefd3881&amp;f_id=005f9fe0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-                <h2>Join the Liquid Gold Community!</h2>
+                <h1>Join the Liquid Gold Community!</h1>
                 <p>Stay ahead of the curve with our expert crypto insights, delivered directly to your inbox. Sign up for the Liquid Gold Newsletter today and discover the profitable opportunities you've been missing.</p>
                 <p className="required-label"><span className="asterisk">*</span> indicates required</p>
                 <Form.Group className="mb-3 form-line">

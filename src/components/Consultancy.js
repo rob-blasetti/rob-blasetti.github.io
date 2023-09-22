@@ -4,9 +4,8 @@ import { Container } from 'react-bootstrap';
 const Consultancy = () => (
   <div id="consultancy" className="consultancy-section">
     <Container>
+        <h1 className="text-center">Your Partner In Consulting</h1>
         <div className="intro-section">
-            <h2 className="text-center">Crypto Consulting</h2>
-            <p className="text-center">Dive into the world of cryptocurrency with Liquid Gold Consulting leading the way.</p>
             <p>As the cryptocurrency realm evolves, navigating its intricacies demands expertise and foresight. At Liquid Gold Consulting, we're here to provide that guidance, ensuring your assets are managed with unparalleled precision and protection.</p>
         </div>
 

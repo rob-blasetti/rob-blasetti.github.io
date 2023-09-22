@@ -64,38 +64,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.hero-content {
-  background-color: @secondary-blue;
-  opacity: 0.95;
-  padding: 20px;
-  text-align: center;
-}
-
-.hero-title {
-  color: @secondary-gold;
-  text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
-  margin: 0;
-  padding: 0;
-}
-
-.hero-description {
-  color: @secondary-gold;
-  text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
-  margin: 10px 0;
-}
-
-.hero-button {
-  margin-top: 20px;
-}
-
 .carousel-video-container {
   position: relative;
   width: 100%;
@@ -315,12 +283,6 @@ button {
   @media screen and (min-width: 992px) {
     max-width: 960px; // Maximum width of 960px on small laptops
     width: 66.67%; // 2/3rd width on larger screens
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hero-content {
-    display: none;
   }
 }
 
@@ -685,3 +647,31 @@ button {
   font-weight: bold;
   color: @tertiary-white;
 }
+
+// Consulting Section
+/* Making the container a flex container */
+.consultancy-section .container {
+  display: flex;
+  flex-direction: column;  /* Stacking children vertically */
+}
+
+/* Styling for the first section */
+.consultancy-section .intro-section {
+  width: 100%; /* Taking up the full width */
+  margin-bottom: 20px; /* Some margin for spacing between rows */
+}
+
+/* Styling for the second section */
+.consultancy-section .services-section {
+  width: 50%; /* Taking up half the width */
+  margin-right: 50%; /* Empty space on the right */
+  margin-bottom: 20px; /* Some margin for spacing between rows */
+}
+
+/* Styling for the third section */
+.consultancy-section .contact-section {
+  width: 50%; /* Taking up half the width */
+  margin-left: 50%; /* Empty space on the left */
+}
+
+
