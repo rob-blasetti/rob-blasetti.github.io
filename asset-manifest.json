@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.768c4fb0.css",
-    "main.js": "/static/js/main.13ed8523.js",
+    "main.css": "/static/css/main.7b7af1ed.css",
+    "main.js": "/static/js/main.e172e13d.js",
     "static/js/787.47502b57.chunk.js": "/static/js/787.47502b57.chunk.js",
     "static/media/LG-hero-image.svg": "/static/media/LG-hero-image.41169a87b603f2047d31.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -9,12 +9,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.768c4fb0.css.map": "/static/css/main.768c4fb0.css.map",
-    "main.13ed8523.js.map": "/static/js/main.13ed8523.js.map",
+    "main.7b7af1ed.css.map": "/static/css/main.7b7af1ed.css.map",
+    "main.e172e13d.js.map": "/static/js/main.e172e13d.js.map",
     "787.47502b57.chunk.js.map": "/static/js/787.47502b57.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.768c4fb0.css",
-    "static/js/main.13ed8523.js"
+    "static/css/main.7b7af1ed.css",
+    "static/js/main.e172e13d.js"
   ]
 }
