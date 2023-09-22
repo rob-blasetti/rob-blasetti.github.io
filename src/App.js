@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { NavBar, VideoCarousel, SocialLinks, Hero, Courses, BlogPage, BlogDetail, NewsletterSignup, AboutUs, ContactUs } from './components';
+import { NavBar, VideoCarousel, SocialLinks, Hero, Courses, BlogPage, BlogDetail, NewsletterSignup, AboutUs, ContactUs, Consultancy, ScrollToAnchor } from './components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
@@ -54,6 +54,7 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToAnchor />
       <NavBar />
       <Routes>
         <Route exact path="/blog" element={<BlogPage />} />
@@ -66,6 +67,9 @@ const App = () => {
                 <h1>The cutting edge of the crypto economy</h1>
                 <p className="mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
               </Container>
+              <div id="consultancy" className="section consultancy-section">
+                <Consultancy />
+              </div>
               <div id="videos" className="section videos-section">
               <h1>Liquid Gold Media</h1>
                 <p>News, Crypto Explainers, Opinions. Have a look at our curated playlists, designed to cater for all levels of experience.</p>
