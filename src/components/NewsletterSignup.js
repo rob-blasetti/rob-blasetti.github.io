@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form } from 'react-bootstrap';
 
 const NewsletterSignup = () => {
     return (
@@ -19,7 +19,7 @@ const NewsletterSignup = () => {
                 <Form.Group style={{display: 'none'}} aria-hidden="true">
                     <Form.Control type="text" name="b_ef21ffacffc296d3510cc1e0e_21eefd3881" tabIndex="-1" />
                 </Form.Group>
-                <Button className="newsletter-submit-buttom" type="submit" id="mc-embedded-subscribe" value="Subscribe">Subscribe</Button>
+                <button className="submit-button" type="submit" id="mc-embedded-subscribe">Subscribe</button>
             </Form>
         </Container>
     );

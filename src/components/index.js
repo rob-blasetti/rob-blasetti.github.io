@@ -9,4 +9,5 @@ export { default as AboutUs } from './AboutUs';
 export { default as ContactUs } from './ContactUs';
 export { default as Consultancy } from './Consultancy';
 export { default as NewsletterSignup } from './NewsletterSignup';
+export { default as BlogHighlights } from './BlogHighlights';
 export { default as ScrollToAnchor } from './ScrollToAnchor';

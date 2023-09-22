@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { NavBar, VideoCarousel, SocialLinks, Hero, Courses, BlogPage, BlogDetail, NewsletterSignup, AboutUs, ContactUs, Consultancy, ScrollToAnchor } from './components';
+import { NavBar, VideoCarousel, SocialLinks, Hero, Courses, BlogPage, BlogDetail, NewsletterSignup, AboutUs, ContactUs, Consultancy, BlogHighlights, ScrollToAnchor } from './components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
@@ -63,10 +63,9 @@ const App = () => {
           <div className="App" id="home">
             <Hero />
             <header className="App-header">
-              <Container className="section">
-                <h1>The cutting edge of the crypto economy</h1>
-                <p className="mb-4">Welcome to Liquid Gold, your source for the latest news on cryptocurrencies. We're committed to providing you with the most relevant and up-to-date information in the crypto world.</p>
-              </Container>
+              <div id="about-us" className="section about-us-section">
+                <AboutUs />
+              </div>
               <div id="consultancy" className="section consultancy-section">
                 <Consultancy />
               </div>
@@ -76,7 +75,7 @@ const App = () => {
                   {isLoading ? <p>Loading...</p> : <VideoCarousel videoIds={videoIds} />}
                 <Container className="text-center mt-4">
                 <a
-                  className="youtube-link"
+                  className="submit-button"
                   href={SOCIAL_LINKS.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -88,11 +87,11 @@ const App = () => {
               <div id="courses" className="section courses-section">
                 <Courses />
               </div>
+              <div id="blog-highlights" className="section blog-highlights-section">
+                <BlogHighlights />
+              </div>
               <div id="newsletter" className="section newsletter-signup-section">
                 <NewsletterSignup />
-              </div>
-              <div id="about-us" className="section about-us-section">
-                <AboutUs />
               </div>
               <div id="contact-us" className="section contact-us-section">
                 <ContactUs />

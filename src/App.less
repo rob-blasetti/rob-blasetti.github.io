@@ -387,6 +387,8 @@ button {
   a {
     text-decoration: none;
     color: @primary-light-gold;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -406,21 +408,87 @@ button {
   outline: none;
 }
 
-.youtube-link {
-  display: inline-block;
-  padding: 0.5em 2em;
-  color: @primary-light-gold;
-  background-color: @primary-gold;
-  border: 2px solid @primary-dark-brown;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
+// sections
 
 .section {
   padding-top: 150px;
   padding-bottom: 150px;
+}
+
+.about-us-section,
+.videos-section,
+.blog-highlights-section,
+.contact-us-section {
+  background-color: @secondary-light-grey;
+  h1, h2, p {
+    color: black;
+    margin-bottom: 30px;
+  }
+  a {
+    color: @tertiary-dark-white;
+  }
+}
+
+.youtube-link {
+  font-weight: bold;
+}
+
+.consultancy-section,
+.courses-section,
+.newsletter-signup-section,
+.social-links-card {
+  background-color: @primary-light-gold;
+  h1, h2, p, .form-label {
+    color: @tertiary-white;
+    margin-bottom: 30px;
+  }
+  .asterisk {
+    color: red;
+  }
+}
+
+.social-links-card .social-links-header {
+  color: @tertiary-white; 
+}
+
+.consultancy-section {
+  a {
+    color: @primary-gold;
+  }
+}
+
+.contact-us-section {
+  a {
+    color: @primary-light-gold;
+  }
+}
+
+.newsletter-signup-section {
+  .form-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .form-label { flex: 1; }
+  .form-control { flex: 2; }
+}
+
+.submit-button {
+  color: @primary-light-gold;
+  background-color: @primary-gold;
+  border: 2px solid @primary-dark-brown;
+  padding: 0.5em 2em;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    background-color: darken(@primary-gold, 10%);
+    border-color: @primary-light-gold;
+    color: @primary-light-gold;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -430,105 +498,8 @@ button {
   }  
 }
 
-.newsletter-signup-section {
-  background-color: @secondary-dark-blue;
-  h2, p, .form-label {
-    color: @tertiary-white;
-    margin-bottom: 30px;
-  }
-}
-
-.newsletter-signup-section {
-  .asterisk {
-    color: red;
-  }
-
-  .form-line {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .form-label {
-    flex: 1;
-  }
-
-  .form-control {
-    flex: 2;
-  }
-  
-  .newsletter-submit-buttom {
-    background-color: @primary-gold;
-    color: @primary-light-gold;
-    padding: 8px 16px;
-    border: 2px solid @primary-dark-grey;
-    border-radius: 4px;
-    cursor: pointer;
-    &:hover {
-      background-color: darken(@primary-gold, 10%);
-    }
-  }  
-}
-
-
-
-.about-us-section {
-  background-color: @secondary-light-grey;
-  h2, p {
-    color: black;
-    margin-bottom: 30px;
-  }
-}
-
-.consultancy-section {
-  background-color: @secondary-dark-blue;
-  h2, p {
-    color: @tertiary-white;
-    margin-bottom: 30px;
-  }
-  a {
-    color: @primary-gold;
-  }
-}
-
-.contact-us-section {
-  background-color: @secondary-dark-blue;
-  h2, p {
-    color: @tertiary-white;
-    margin-bottom: 30px;
-  }
-  a {
-    color: @primary-gold;
-  }
-}
-
 .liquid-gold-heading {
   color: @primary-gold;
-}
-
-.videos-section {
-  background-color: @secondary-light-grey;
-  h1, p {
-    color: black;
-    margin-bottom: 30px;
-  }
-}
-
-.youtube-link {
-  font-weight: bold;
-}
-
-.social-links-section {
-  background-color: @tertiary-white;
-
-}
-
-.courses-section {
-  background-color: @primary-dark-grey;
-  h2 {
-    color: @tertiary-white;
-    margin-bottom: 30px;
-  }
 }
 
 /* Styles for the blog cards */
@@ -579,6 +550,7 @@ button {
 .blog-detail {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+  color: @tertiary-dark-white;
 
   .author {
     font-style: italic;
@@ -593,6 +565,7 @@ button {
   .detail-title {
     display: flex;
     justify-content: center;
+    color: @tertiary-dark-white;
   }
 
   .detail-info {
@@ -606,6 +579,7 @@ button {
   }
 
   .detail-content {   
+    color: @tertiary-dark-white;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -665,6 +639,33 @@ button {
     .source {
       color: #666;
     }
+  }
+}
+
+.blog-highlights-section a {
+  text-decoration: none;
+}
+
+.blog-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  width: 350px;
+  height: 350px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .author {
+    font-style: italic;
+  }
+
+  .source {
+    color: #666;
   }
 }
 
