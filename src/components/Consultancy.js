@@ -24,7 +24,7 @@ const Consultancy = () => (
             <p>Engage with us and take the first step toward mastering the realm of digital assets. Every collaboration is underpinned by our commitment to clarity, transparency, and the highest standards of professionalism.</p>
             <p>Liquid Gold Consulting isn't just a service; it's a partnership dedicated to empowering you in the world of digital currencies. Join us, and let's shape your crypto journey together.</p>
             <p className="text-center">Eager to discover more? Connect with us and embark on a journey of cryptocurrency confidence.</p>
-            <p className="text-center">For inquiries, reach out at: <a href="mailto:info@liquidgold.com.au">info@liquidgold.com.au</a></p>
+            <p className="text-center">For inquiries, reach out at: <a href="mailto:info@liquidgoldcrypto.com.au">info@liquidgoldcrypto.com.au</a></p>
         </div>
     </Container>
   </div>

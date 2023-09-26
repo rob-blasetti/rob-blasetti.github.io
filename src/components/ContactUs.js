@@ -9,7 +9,7 @@ const ContactUs = () => (
           <p className="text-center mb-4">
             We would love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.
           </p>
-          <p className="text-center">Email: <a href="mailto:info@liquidgold.com">info@liquidgoldcrypto.com.au</a></p>
+          <p className="text-center">Email: <a href="mailto:info@liquidgoldcrypto.com">info@liquidgoldcrypto.com.au</a></p>
         </Col>
       </Row>
     </Container>
