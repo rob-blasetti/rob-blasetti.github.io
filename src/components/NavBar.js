@@ -24,12 +24,12 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="ml-auto">
-            <div className="nav-link" onClick={() => handleNavigation('/', '#about-us')}>Our Journey</div>
+            <div className="nav-link" onClick={() => handleNavigation('/', '#about-us')}>About Us</div>
             <div className="nav-link" onClick={() => handleNavigation('/', '#consultancy')}>Consultancy</div>
             
-            <NavDropdown title="Golden Content" id="basic-nav-dropdown">
+            <NavDropdown title="Education" id="basic-nav-dropdown">
+            <NavDropdown.Item onClick={() => handleNavigation('/', '#videos')}>Videos</NavDropdown.Item>
               <NavDropdown.Item onClick={() => handleNavigation('/', '#courses')}>Guided Tour Course</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => handleNavigation('/', '#videos')}>Videos</NavDropdown.Item>
               <NavDropdown.Item onClick={() => handleNavigation('/blog', '')}>Blog</NavDropdown.Item>
             </NavDropdown>
             

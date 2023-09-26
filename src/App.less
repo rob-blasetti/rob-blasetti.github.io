@@ -342,7 +342,7 @@ button {
   padding: 15px;
   margin: 10px;
   background-color: @tertiary-soft-gold;
-  border: 1px solid @primary-dark-grey;
+  border: 1px solid @primary-gold;
   border-radius: 5px;
   transition: background-color 0.3s, border-color 0.3s;
   cursor: pointer;
@@ -428,12 +428,20 @@ button {
 .newsletter-signup-section {
   .form-line {
     display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+    align-items: center; /* Ensures vertical centering */
+    
+    .form-label {
+      flex: 1;
+      // margin-right: -10px; /* Added spacing between label and input */
+      margin-bottom: 0;
+    }
+    
+    .form-control {
+      flex: 2;
+    }
   }
-  .form-label { flex: 1; }
-  .form-control { flex: 2; }
 }
+
 
 .submit-button {
   color: @primary-light-gold;
@@ -649,10 +657,12 @@ button {
 }
 
 // Consulting Section
+
 /* Making the container a flex container */
 .consultancy-section .container {
   display: flex;
   flex-direction: column;  /* Stacking children vertically */
+  align-items: center; /* Horizontally centering the content */
 }
 
 /* Styling for the first section */
@@ -661,17 +671,67 @@ button {
   margin-bottom: 20px; /* Some margin for spacing between rows */
 }
 
+/* New container for services and screenshot */
+.consultancy-section .content-wrapper {
+  display: flex;
+  width: 100%; /* Taking up the full width */
+  justify-content: space-between; /* Space between the two sections */
+}
+
 /* Styling for the second section */
 .consultancy-section .services-section {
-  width: 50%; /* Taking up half the width */
-  margin-right: 50%; /* Empty space on the right */
-  margin-bottom: 20px; /* Some margin for spacing between rows */
+  flex: 1; /* This will make it adjust based on the remaining space */
+  margin-right: 2%; /* Some margin for spacing between the two sections */
+  color: white;
+
+  h3 {
+    color: white;
+  }
 }
 
-/* Styling for the third section */
-.consultancy-section .contact-section {
-  width: 50%; /* Taking up half the width */
-  margin-left: 50%; /* Empty space on the left */
+
+.screenshot-section {
+  flex: 1; /* This will make it adjust based on the remaining space */
+  display: flex; /* Using flex to help center the image vertically */
+  align-items: center; /* Centers the image vertically */
+  justify-content: center; /* Centers the image horizontally */
+
+  img {
+    max-width: 90%; /* This will make the image scale if it's larger than the div, and also provides some space for the border */
+    display: block; /* Removes any extra space below the image */
+    border: 5px solid #B8860B; /* A gold color for the border */
+    box-shadow: 0px 0px 10px rgba(184, 134, 11, 0.5); /* Optional: A subtle gold shadow to give the image a bit of depth */
+    border-radius: 8px; /* Optional: Rounds the corners of the image for a more polished look */
+  }
 }
 
+/* Styling for the golden bullet points */
+.services-section ul {
+  list-style-type: none; /* Removes default bullets */
+  padding-left: 20px;   /* Adds a little space for custom bullet */
+}
 
+.services-section ul li::before {
+  content: "\2022";   /* Unicode character for a bullet point */
+  color: #FFD700;     /* Gold color */
+  font-size: 2.2em;   /* Slightly larger bullet */
+  font-weight: bold;  /* Bold bullet */
+  display: inline-block;
+  margin-right: 10px; /* Space between the bullet and text */
+  text-shadow: 
+      1px 1px 2px rgba(255, 223, 0, 0.7), 
+      -1px -1px 2px rgba(255, 223, 0, 0.7), 
+      1px -1px 2px rgba(255, 223, 0, 0.7), 
+      -1px 1px 2px rgba(255, 223, 0, 0.7); /* Glow effect */
+}
+
+/* Optional: If you'd like a gradient for a richer golden effect */
+.services-section ul li::before {
+  background: -webkit-linear-gradient(top, #FFD700, #FFCC00);
+  background: -moz-linear-gradient(top, #FFD700, #FFCC00);
+  background: -o-linear-gradient(top, #FFD700, #FFCC00);
+  background: linear-gradient(to bottom, #FFD700, #FFCC00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

@@ -11,11 +11,11 @@ export const SOCIAL_LINKS = {
 
 export const COURSES = [
   {
-    title: 'Guided Tour Through Crypto Part 1',
+    title: 'Guided Tour Through Crypto [Part 1]',
     link: 'https://qcc.rocks/guided-tour-through-crypto-order',
   },
   {
-    title: 'Guided Tour Through Crypto Part 2',
+    title: 'Guided Tour Through Crypto [Part 2]',
     link: 'https://qcc.rocks/guided-tour-through-crypto-order',
   },
 ];
