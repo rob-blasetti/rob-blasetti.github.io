@@ -15,7 +15,6 @@ const Consultancy = () => (
                 <ul>
                     <li><strong>Transaction Analysis:</strong> Comprehensive evaluation of your crypto transactions with potential for fund recovery.</li>
                     <li><strong>Security Hardening:</strong> Fortify your crypto assets against vulnerabilities and potential threats.</li>
-                    <li><strong>Personalized Consultancy:</strong> Tailored advice and strategies to ensure your crypto journey is both profitable and secure.</li>
                     <li><strong>Training and Education:</strong> Equip yourself with the knowledge needed to confidently navigate the cryptocurrency landscape.</li>
                     <li><strong>And More:</strong> Our suite of services is ever-evolving to meet the demands of the rapidly changing crypto world.</li>
                 </ul>
