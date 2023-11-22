@@ -12,10 +12,10 @@ export const SOCIAL_LINKS = {
 export const COURSES = [
   {
     title: 'Guided Tour Through Crypto [Part 1]',
-    link: 'https://qcc.rocks/guided-tour-through-crypto-order',
+    link: 'https://app.questchiropracticcoaching.com/guided-tour-through-crypto-order-form',
   },
   {
     title: 'Guided Tour Through Crypto [Part 2]',
-    link: 'https://qcc.rocks/guided-tour-through-crypto-order',
+    link: 'https://app.questchiropracticcoaching.com/guided-tour-through-crypto-order-form',
   },
 ];
