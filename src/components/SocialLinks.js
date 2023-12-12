@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap';
-import { faInstagram, faTwitter, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faXTwitter, faYoutube, faTiktok, faRedditAlien } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SOCIAL_LINKS } from '../constants';
 
@@ -11,23 +11,28 @@ const SocialLinks = () => {
       </Card.Header>
       <Card.Body>
         <div className="social-link-tile">
-          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faInstagram} size="2x" className="social-icon" /> Instagram
-          </a>
-        </div>
-        <div className="social-link-tile">
           <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faTwitter} size="2x" className="social-icon" /> Twitter
-          </a>
-        </div>
-        <div className="social-link-tile">
-          <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faTiktok} size="2x" className="social-icon" /> TikTok
+            <FontAwesomeIcon icon={faXTwitter} size="2x" className="social-icon" />
           </a>
         </div>
         <div className="social-link-tile">
           <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faYoutube} size="2x" className="social-icon" /> YouTube
+            <FontAwesomeIcon icon={faYoutube} size="2x" className="social-icon" />
+          </a>
+        </div>
+        <div className="social-link-tile">
+          <a href={SOCIAL_LINKS.reddit} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faRedditAlien} size="2x" className="social-icon" />
+          </a>
+        </div>
+        <div className="social-link-tile">
+          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} size="2x" className="social-icon" />
+          </a>
+        </div>
+        <div className="social-link-tile">
+          <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTiktok} size="2x" className="social-icon" />
           </a>
         </div>
       </Card.Body>

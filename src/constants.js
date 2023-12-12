@@ -7,6 +7,7 @@ export const SOCIAL_LINKS = {
   twitter: 'https://twitter.com/liquidgoldcn',
   tiktok: 'https://www.tiktok.com/@liquidgoldcn',
   youtube: 'https://www.youtube.com/@liquidgoldcn',
+  reddit: 'https://www.reddit.com/user/liquidgold2022',
 };
 
 export const COURSES = [
