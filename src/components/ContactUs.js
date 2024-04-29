@@ -4,7 +4,7 @@ const ContactUs = () => (
   <div id="contact-us">
     <Container>
       <h1 className="mb-4">Contact Us</h1>
-      <Row className="justify-content-center">
+      <Row>
         <Col md={6}>
           <p className="mb-4">
             We would love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.

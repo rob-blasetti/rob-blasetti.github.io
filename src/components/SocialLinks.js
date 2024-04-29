@@ -6,9 +6,6 @@ import { SOCIAL_LINKS } from '../constants';
 const SocialLinks = () => {
   return (
     <Card className="social-links-card">
-      <Card.Header className="social-links-header">
-        Follow us on social media!
-      </Card.Header>
       <Card.Body>
         <div className="social-link-tile">
           <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer">

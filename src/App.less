@@ -318,7 +318,7 @@ button {
   font-size: 30px;
   line-height: 1;
   opacity: 0.75;
-  color: @primary-dark-grey;
+  color: @liquid-black;
 }
 
 .slick-prev:hover:before,
@@ -326,6 +326,12 @@ button {
 .slick-prev:focus:before,
 .slick-next:focus:before {
   opacity: 1;
+}
+
+
+.social-links-card .card-body {
+  display: flex;
+  justify-content: center;
 }
 
 .social-links-header {
@@ -391,6 +397,8 @@ button {
 
 .social-links-card {
   background-color: @education-blue;
+  border-radius: 0;
+  border-bottom: none;
   .social-links-header {
     color: @tertiary-white; 
   }
@@ -424,6 +432,11 @@ button {
   a {
     color: @tertiary-dark-white;
   }
+}
+
+.videos-section,
+.blog-highlights-section {
+  text-align: center; /* Center-align the text within the container */
 }
 
 .youtube-link {
@@ -464,9 +477,9 @@ button {
 
 
 .submit-button {
-  color: @primary-light-gold;
-  background-color: @primary-gold;
-  border: 2px solid @primary-dark-brown;
+  color: @liquid-black;
+  background-color: @bright-gold;
+  border: 2px solid @liquid-white;
   padding: 0.5em 2em;
   border-radius: 4px;
   text-decoration: none;
@@ -475,9 +488,7 @@ button {
   font-weight: 700;
   cursor: pointer;
   &:hover {
-    background-color: darken(@primary-gold, 10%);
-    border-color: @primary-light-gold;
-    color: @primary-light-gold;
+    background-color: darken(@bright-gold, 10%);
   }
 }
 
