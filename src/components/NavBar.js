@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { animateScroll as scroll } from 'react-scroll';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
@@ -31,7 +31,7 @@ const NavBar = () => {
             <NavDropdown title="Education" id="basic-nav-dropdown">
             <NavDropdown.Item onClick={() => handleNavigation('/', '#videos')}>Videos</NavDropdown.Item>
               <NavDropdown.Item onClick={() => handleNavigation('/', '#courses')}>Guided Tour Course</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => handleNavigation('/blog', '')}>Blog</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/blog">Blog</NavDropdown.Item>
             </NavDropdown>
             
             <NavDropdown title="Join Us" id="basic-nav-dropdown">
