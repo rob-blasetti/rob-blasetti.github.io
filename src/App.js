@@ -32,6 +32,7 @@ const App = () => {
               maxResults: 5,
               order: 'date',
               type: 'video',
+              videoDuration: 'medium', // Exclude very short videos (like YouTube Shorts)  
               key: API_KEY
             }
           });
