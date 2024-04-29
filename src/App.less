@@ -2,12 +2,20 @@
 
 body {
   background-color: @secondary-light-grey;
-  font-family: 'Montserrat', sans-serif;
   color: @primary-dark-grey;
 }
 
+body, p {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @primary-dark-grey;
+  font-family: "Noto Serif", serif;
+}
+
 .App {
-  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,9 +32,6 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  color: @primary-dark-grey;
-}
 
 .navbar-brand {
   font-size: 1.5rem;
@@ -35,8 +40,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .hero-container {
-  background-image: url('~../public/images/LG-hero-image.svg');
-  background-position: center;
+  background-image: url('~../public/images/LG-hero-image.png');
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;

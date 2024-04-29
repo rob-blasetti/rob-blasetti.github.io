@@ -5,7 +5,7 @@ import { SOCIAL_LINKS } from '../constants';
 
 const SocialLinks = () => {
   return (
-    <Card className="social-links-card text-center">
+    <Card className="social-links-card">
       <Card.Header className="social-links-header">
         Follow us on social media!
       </Card.Header>

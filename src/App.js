@@ -73,7 +73,7 @@ const App = () => {
               <h1>Liquid Gold Media</h1>
                 <p>News, Crypto Explainers, Opinions. Have a look at our curated playlists, designed to cater for all levels of experience.</p>
                   {isLoading ? <p>Loading...</p> : <VideoCarousel videoIds={videoIds} />}
-                <Container className="text-center mt-4">
+                <Container className="mt-4">
                 <a
                   className="submit-button"
                   href={SOCIAL_LINKS.youtube}
