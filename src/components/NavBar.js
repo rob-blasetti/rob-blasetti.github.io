@@ -14,6 +14,7 @@ const NavBar = () => {
       window.location.hash = hash;
     }
   };
+  console.log(location);
 
   return (
     <Navbar expand="md" className="navbar">
