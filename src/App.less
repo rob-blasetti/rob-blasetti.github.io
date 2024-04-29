@@ -1,7 +1,7 @@
 @import './colours.less';
 
 body {
-  background-color: @secondary-light-grey;
+  background-color: @education-blue;
   color: @primary-dark-grey;
 }
 
@@ -157,7 +157,6 @@ button {
 }
 
 .navbar {
-  background-color: @primary-dark-grey;
   cursor: pointer;
   padding-left: 50px;
   padding-right: 50px;
@@ -171,11 +170,11 @@ button {
   }
 
   .nav-link {
-    color: @secondary-light-grey;
+    color: @liquid-white;
     margin-right: 50px;
 
     &:hover {
-      color: @tertiary-white;
+      color: @liquid-grey;
     }
   }
 }
@@ -190,8 +189,8 @@ button {
   width: 100%;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: @secondary-blue;
-  border-bottom: 3px solid @primary-gold; /* Adding a gold border at the bottom */
+  background-color: @education-blue;
+  border-bottom: 3px solid @bright-gold; /* Adding a gold border at the bottom */
 }
 
 .navbar-brand {
@@ -267,7 +266,7 @@ button {
   margin: 0 auto; // Center the container
   position: relative;
   padding: 2rem; // Reduce padding for very small screens
-  background: @tertiary-soft-gold;
+  background: @bright-gold;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
@@ -299,14 +298,14 @@ button {
 
     button:before {
       font-size: 12px;
-      color: @primary-dark-grey;
-      opacity: 0.5;
+      color: @liquid-black;
+      opacity: 0.7;
     }
+    
   }
-
   .slick-active button:before {
-    color: @primary-dark-grey;
-    opacity: 1;
+    color: green;
+    opacity: 0.1;
   }
 }
 
@@ -329,11 +328,6 @@ button {
   opacity: 1;
 }
 
-.social-links-card {
-  background-color: @secondary-light-grey;
-  color: black;
-}
-
 .social-links-header {
   font-weight: bold;
 }
@@ -346,21 +340,21 @@ button {
   display: inline-block;
   padding: 15px;
   margin: 10px;
-  background-color: @tertiary-soft-gold;
-  border: 1px solid @primary-gold;
+  background-color: @liquid-grey;
+  border: 1px solid @liquid-black;
   border-radius: 5px;
   transition: background-color 0.3s, border-color 0.3s;
   cursor: pointer;
   a {
     text-decoration: none;
-    color: @primary-light-gold;
+    color: @liquid-black;
     display: flex;
     align-items: center;
   }
 }
 
 .social-link-tile:hover {
-  background-color: @primary-gold;
+  background-color: @liquid-white;
   border-color: @secondary-blue;
 }
 
@@ -383,12 +377,48 @@ button {
 }
 
 .about-us-section,
-.videos-section,
-.blog-highlights-section,
+.courses-section,
 .contact-us-section {
-  background-color: @secondary-light-grey;
+  background-color: @liquid-grey;  
   h1, h2, p {
-    color: black;
+    color: @liquid-black;
+    margin-bottom: 30px;
+  }
+  a {
+    color: @tertiary-dark-white;
+  }
+}
+
+.social-links-card {
+  background-color: @education-blue;
+  .social-links-header {
+    color: @tertiary-white; 
+  }
+  h1, h2, p, .form-label {
+    margin-bottom: 30px;
+  }
+  .asterisk {
+    color: red;
+  }
+}
+
+.consultancy-section,
+.blog-highlights-section {
+  background-color: @education-blue;
+  h1, h2, p {
+    color: @liquid-white;
+    margin-bottom: 30px;
+  }
+  a {
+    color: @tertiary-dark-white;
+  }
+}
+
+.videos-section,
+.newsletter-signup-section {
+  background-color: @liquid-black;  
+  h1, h2, p {
+    color: @liquid-white;
     margin-bottom: 30px;
   }
   a {
@@ -398,24 +428,6 @@ button {
 
 .youtube-link {
   font-weight: bold;
-}
-
-.consultancy-section,
-.courses-section,
-.newsletter-signup-section,
-.social-links-card {
-  background-color: @primary-light-gold;
-  h1, h2, p, .form-label {
-    color: @tertiary-white;
-    margin-bottom: 30px;
-  }
-  .asterisk {
-    color: red;
-  }
-}
-
-.social-links-card .social-links-header {
-  color: @tertiary-white; 
 }
 
 .consultancy-section {
@@ -570,7 +582,7 @@ button {
   }
   
   .back-button {
-    background-color: @secondary-dark-blue;
+  background-color: @secondary-dark-blue;
     color: @tertiary-white;
     padding: 8px 16px;
     border: none;
@@ -655,13 +667,13 @@ button {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 10px;
-  color: @tertiary-white;
+  color: @liquid-black;
 }
 
 .testimonial-author {
   font-size: 16px;
   font-weight: bold;
-  color: @tertiary-white;
+  color: @liquid-black;
 }
 
 // Consulting Section
