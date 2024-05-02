@@ -500,6 +500,25 @@ Another reason for the decreasing in volatility is the development of the tools 
       author: "Robert Blasetti", 
       source: "Medium (Discontinued)",
       lastUpdated: "9 September, 2019" 
+    },
+    {
+      id: 14,
+      title: "Crypto Identity Management, Enforcement and Environment",
+      content: `Recently Microstrategy unveiled a solution for Distributed Identifiers (DIDs) on the bitcoin blockchain. On-chain identity is a nut crypto pioneers have been trying to crack for many years. It’s a difficult problem because it’s a solution in need of a proper environment, which cannot so much be prescribed as it is chosen by a community. Heralded by some as a timely solution for identity management on the blockchain, and scoffed at by others as the worst exploitation of the bitcoin chain since ordinals. Let’s have a look at the identity management problem.
+
+      One thing is clear, in order for the crypto industry to mature into well functioning communities we need an identity system that is persistent, immutable and accepted by the field as a standard.
+      
+      There have been many example attempts of identity management on-chain. Back in 2015 Vinny Lingham's Civic set out to sort out identity management, they issued a Civic pass and required a government issued ID to get you started. Vitalk detailed a solution for identity management on the Ethereum chain through the use of Soulbound Tokens, through an NFT that is bound to an Etheruem account you have a kind of identity management that could essentially be passed from person to person by giving away the keys to the account. 
+      
+      Herein lies the issue, is identity supposed to be bound to a human? If so, we need some sort of institution to verify the identity and tie it back to real life. If not, then it is enough that an identity can be bound to an account, and passed from person to person. At the heart of this issue is a deeply philosophical notion: Is identity a personal choice or does a historical identity trump your preference? If we don’t pin down digital identity on a human person, then there’s no way of ensuring the responsibility of that person to a society. To accumulate trust on that identity would be risky at best.
+      
+      This notion can be extended to the entire blockchain field. Exactly what is it that we are building here? If the blockchain is simply a better money system, that’s one thing, but if we are innovating on governance that hits at the depth of how our society is structured. Looping back to our question about identity and the environment in which this innovation will be successful, it will have to deal with questions of law and order and how they are enforced. Rewards and publications will accrue on an identity when actions are made, just like in typical society. If the blockchain code is used to enforce law and order, the identity profile will have to be penalized or rewarded by the environment based on its actions.
+      
+      This could well be the inception of a new way to structure a digital society. In this society an individuals' personhood and the laws that keep them in check are not enforced by fallible humans but rather agreed upon through a governance system and enforced by the code in the environment. As radically different as this is, it could be the beginning of a new kind of society where transparency leads the way in an individuals civic life but also in economy and government, allowing for a kind of flourishing of human potential that we have never seen before, and a mitigation of corruption. Luckily we have the digital world to use as a test bed for these ideas before they hit too close to home in the real world, we can only hope our transition to a cryptoworld will be smooth.
+      `,
+      author: "Robert Blasetti", 
+      source: "X",
+      lastUpdated: "2 May, 2024" 
     }
   ];
   
